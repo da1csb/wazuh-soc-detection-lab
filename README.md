@@ -6,13 +6,13 @@ Windows 11 endpoint.
 
 ## Lab architecture
 
-- **Wazuh manager** — Ubuntu VM (VMware Workstation Pro, 6GB RAM)
-- **Monitored endpoint** — Windows 11 host with Wazuh agent installed
-- **Dashboard** — Wazuh web UI at https://192.168.153.131
+- **Wazuh manager** - Ubuntu VM (VMware Workstation Pro, 6GB RAM)
+- **Monitored endpoint** - Windows 11 host with Wazuh agent installed
+- **Dashboard** - Wazuh web UI at https://192.168.153.131
 
 ## Detection scenarios
 
-### Scenario 1 — Brute force login detection
+### Scenario 1 - Brute force login detection
 
 Simulated 10 failed login attempts using a PowerShell script. 
 Wazuh detected all 10 authentication failures mapped to MITRE ATT&CK T1110.
@@ -26,29 +26,29 @@ Wazuh detected all 10 authentication failures mapped to MITRE ATT&CK T1110.
 
 ---
 
-### Scenario 2 — Unauthorized user account creation
+### Scenario 2 - Unauthorized user account creation
 
 Created a test local user account via PowerShell. Wazuh detected 
 the account creation in real time and mapped it to MITRE ATT&CK T1098 
-— a common attacker persistence technique.
+- a common attacker persistence technique.
 
 **Rule fired:** 60109  
 **Event ID:** 4720 (User account created)  
-**MITRE:** T1098 — Account Manipulation  
+**MITRE:** T1098 - Account Manipulation  
 
 ![User creation alert](Wazuh-Scenario2-Overview.png)
 ![User creation detail](Wazuh-Scenario2-Detail.png)
 
 ---
 
-### Scenario 3 — Registry integrity monitoring (FIM)
+### Scenario 3 - Registry integrity monitoring (FIM)
 
 Configured Wazuh FIM on the Windows endpoint. Wazuh detected 
 registry key and value modifications, automatically mapping findings 
 to GDPR, HIPAA, and PCI-DSS compliance frameworks.
 
 **Rule fired:** 750, 594  
-**MITRE:** T1565.001 — Stored Data Manipulation, T1112 — Modify Registry  
+**MITRE:** T1565.001 — Stored Data Manipulation, T1112 - Modify Registry  
 **Compliance:** GDPR II_5.1.f · HIPAA 164.312.c.1 · PCI-DSS 11.5  
 
 ![FIM alerts table](Wazuh-Scenario3-FIM-Table.png)
@@ -58,7 +58,7 @@ to GDPR, HIPAA, and PCI-DSS compliance frameworks.
 
 ## Key takeaways
 
-- Deployed full Wazuh stack from scratch on Ubuntu — manager, 
+- Deployed full Wazuh stack from scratch on Ubuntu - manager, 
   indexer, and dashboard
 - Connected a Windows 11 agent and generated real security alerts
 - Detected 3 attack scenarios mapped to MITRE ATT&CK techniques
