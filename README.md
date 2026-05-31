@@ -19,7 +19,7 @@ Wazuh detected all 10 authentication failures mapped to MITRE ATT&CK T1110.
 
 **Rule fired:** 60122  
 **Event ID:** 4625 (Windows failed logon)  
-**MITRE:** T1110 — Brute Force  
+**MITRE:** T1110 - Brute Force  
 
 ![Brute force overview](Wazuh-Scenario1-Overview.png)
 ![Brute force alerts](Wazuh-Scenario1-Alerts.png)
@@ -48,7 +48,7 @@ registry key and value modifications, automatically mapping findings
 to GDPR, HIPAA, and PCI-DSS compliance frameworks.
 
 **Rule fired:** 750, 594  
-**MITRE:** T1565.001 — Stored Data Manipulation, T1112 - Modify Registry  
+**MITRE:** T1565.001 - Stored Data Manipulation, T1112 - Modify Registry  
 **Compliance:** GDPR II_5.1.f · HIPAA 164.312.c.1 · PCI-DSS 11.5  
 
 ![FIM alerts table](Wazuh-Scenario3-FIM-Table.png)
